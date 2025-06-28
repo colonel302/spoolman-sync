@@ -23,7 +23,7 @@ Dieses Projekt wäre nicht möglich ohne die großartige Vorarbeit folgender Ent
 
 ## Aktueller Funktionsumfang
 
-Mit diesem Projekt werden Filament-Spulen automatisch mit dem Bambu Lab AMS (Automatic Material System) oder per Handy (NFC/RFID) ausgelesen und in Spoolman eingetragen bzw>
+Mit diesem Projekt werden Filament-Spulen automatisch mit dem Bambu Lab AMS (Automatic Material System) oder per Handy (NFC/RFID) ausgelesen und in Spoolman eingetragen bzw. aktualisiert.
 
 - Die RFID-Chips der Bambu Lab-Spulen werden mit einem NFC-fähigen Android-Gerät und der oben genannten App ausgelesen.
 - Die Daten (z.B. Seriennummer, Chargennummer) werden automatisch an Spoolman übertragen.
