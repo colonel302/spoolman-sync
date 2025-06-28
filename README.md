@@ -4,6 +4,38 @@ Synchronisiert das Extra-Feld tag und das Feld lot_nr in Spoolman-Filamentspulen
 lot_nr ist führend, d.h. Änderungen werden immer von lot_nr nach tag synchronisiert.
 Das Skript ist kompatibel mit Spoolman ab Version 0.22.1 und nutzt eine .env-Datei zur Konfiguration.
 
+## Dank und Inspiration
+
+Dieses Projekt wäre nicht möglich ohne die großartige Vorarbeit folgender Entwickler und Repositories:
+
+- [MrBambuSpoolPal-BambuSpoolPal_AndroidApp](https://github.com/MrBambuSpoolPal/MrBambuSpoolPal-BambuSpoolPal_AndroidApp)
+  *Eine Android-App zum Auslesen der Bambu Lab RFID-Tags und automatischen Eintragen in Spoolman.*
+
+- [Donkie/Spoolman](https://github.com/Donkie/Spoolman)
+  *Das zentrale Open-Source-Filamentverwaltungssystem, auf dem dieses Projekt aufsetzt.*
+
+- [Rdiger-36/bambulab-ams-spoolman-filamentstatus](https://github.com/Rdiger-36/bambulab-ams-spoolman-filamentstatus)
+  *Skripte und Tools zur Integration von Bambu Lab AMS und Spoolman.*
+
+**Vielen Dank an alle Entwickler und die Community für die Inspiration und die hervorragende Vorarbeit!**
+
+---
+
+## Aktueller Funktionsumfang
+
+Mit diesem Projekt werden Filament-Spulen automatisch mit dem Bambu Lab AMS (Automatic Material System) oder per Handy (NFC/RFID) ausgelesen und in Spoolman eingetragen bzw>
+
+- Die RFID-Chips der Bambu Lab-Spulen werden mit einem NFC-fähigen Android-Gerät und der oben genannten App ausgelesen.
+- Die Daten (z.B. Seriennummer, Chargennummer) werden automatisch an Spoolman übertragen.
+- Der Filamentverbrauch wird automatisch über das AMS (einschließlich mehrerer AMS-Systeme) in Spoolman aktualisiert.
+
+**Getestet mit:**
+- Bambu Lab X1E
+- AMS 1
+- AMS 2 Pro
+
+---
+
 ## Voraussetzungen
 
 - Python 3
@@ -82,36 +114,6 @@ Wenn du ein Wrapper-Skript verwendest, das die venv aktiviert, stelle sicher, da
 1. Anpassen/Erstellen der .env Datei und Variablen
 2. Ausführen: `python3 spoolman-sync.py`
 3. Optional als Cronjob einrichten.
-
-## Dank und Inspiration
-
-Dieses Projekt wäre nicht möglich ohne die großartige Vorarbeit folgender Entwickler und Repositories:
-
-- [MrBambuSpoolPal-BambuSpoolPal_AndroidApp](https://github.com/MrBambuSpoolPal/MrBambuSpoolPal-BambuSpoolPal_AndroidApp)  
-  *Eine Android-App zum Auslesen der Bambu Lab RFID-Tags und automatischen Eintragen in Spoolman.*
-
-- [Donkie/Spoolman](https://github.com/Donkie/Spoolman)  
-  *Das zentrale Open-Source-Filamentverwaltungssystem, auf dem dieses Projekt aufsetzt.*
-
-- [Rdiger-36/bambulab-ams-spoolman-filamentstatus](https://github.com/Rdiger-36/bambulab-ams-spoolman-filamentstatus)  
-  *Skripte und Tools zur Integration von Bambu Lab AMS und Spoolman.*
-
-**Vielen Dank an alle Entwickler und die Community für die Inspiration und die hervorragende Vorarbeit!**
-
----
-
-## Aktueller Funktionsumfang
-
-Mit diesem Projekt werden Filament-Spulen automatisch mit dem Bambu Lab AMS (Automatic Material System) oder per Handy (NFC/RFID) ausgelesen und in Spoolman eingetragen bzw. aktualisiert.
-
-- Die RFID-Chips der Bambu Lab-Spulen werden mit einem NFC-fähigen Android-Gerät und der oben genannten App ausgelesen.
-- Die Daten (z.B. Seriennummer, Chargennummer) werden automatisch an Spoolman übertragen.
-- Der Filamentverbrauch wird automatisch über das AMS (einschließlich mehrerer AMS-Systeme) in Spoolman aktualisiert.
-
-**Getestet mit:**
-- Bambu Lab X1E
-- AMS 1
-- AMS 2 Pro
 
 ---
 
